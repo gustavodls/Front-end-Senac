@@ -1,0 +1,498 @@
+/* ============================================
+   LOJA VIRTUAL - CSS EDUCACIONAL SIMPLIFICADO
+   Todas as classes em português para facilitar o ensino
+   ============================================ */
+
+/* Cores principais */
+:root {
+    --azul: #2563eb;
+    --azul-escuro: #1d4ed8;
+    --verde: #10b981;
+    --vermelho: #ef4444;
+    --laranja: #f59e0b;
+    --cinza-claro: #f3f4f6;
+    --cinza: #9ca3af;
+    --cinza-escuro: #4b5563;
+    --preto: #1f2937;
+    --branco: #ffffff;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cinza-claro);
+    color: var(--preto);
+    line-height: 1.6;
+}
+
+/* espaco centralizado */
+.espaco {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================
+   CABEÇALHO
+   ============================================ */
+.cabecalho {
+    background: var(--branco);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.cabecalho .espaco {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+/* Logo */
+.logo {
+    color: var(--azul);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Menu de navegação */
+.menu {
+    display: flex;
+}
+
+.lista-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.link-menu {
+    text-decoration: none;
+    color: var(--cinza-escuro);
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s;
+}
+
+/* Animação do sublinhado no menu */
+.link-menu::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--azul);
+    transition: width 0.3s;
+}
+
+.link-menu:hover {
+    color: var(--azul);
+}
+
+.link-menu:hover::after,
+.link-menu.ativo::after {
+    width: 100%;
+}
+
+.link-menu.ativo {
+    color: var(--azul);
+}
+
+/* Botão do carrinho */
+.botao-carrinho {
+    background: var(--azul);
+    color: var(--branco);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.botao-carrinho:hover {
+    background: var(--azul-escuro);
+    transform: scale(1.05);
+}
+
+/* Contador do carrinho */
+.contador {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--vermelho);
+    color: var(--branco);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulsar 2s infinite;
+}
+
+/* Animação de pulsação */
+@keyframes pulsar {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* ============================================
+   BANNER
+   ============================================ */
+.banner {
+    background: linear-gradient(135deg, var(--azul) 0%, var(--azul-escuro) 100%);
+    color: var(--branco);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.titulo-banner {
+    font-size: 36px;
+    margin-bottom: 15px;
+    animation: aparecer 1s ease;
+}
+
+.texto-banner {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    animation: aparecer 1s ease 0.3s both;
+}
+
+/* Animação de aparecer de baixo */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.botao-principal {
+    display: inline-block;
+    background: var(--laranja);
+    color: var(--branco);
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: aparecer 1s ease 0.6s both;
+}
+
+.botao-principal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================
+   CONTEÚDO PRINCIPAL
+   ============================================ */
+.conteudo-principal {
+    padding: 40px 0;
+}
+
+.titulo-secao {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: var(--preto);
+}
+
+/* Grade de produtos - Layout principal */
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* ============================================
+   CARTÃO DE PRODUTO
+   ============================================ */
+.cartao-produto {
+    background: var(--branco);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: subir 0.6s ease both;
+}
+
+/* Animação de entrada dos cartões */
+@keyframes subir {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delay para cada cartão aparecer em sequência */
+.cartao-produto:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.cartao-produto:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.cartao-produto:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.cartao-produto:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.cartao-produto:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.cartao-produto:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.cartao-produto:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.cartao-produto:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+/* Efeito hover no cartão */
+.cartao-produto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagem do produto */
+.imagem-produto {
+    position: relative;
+    height: 200px;
+    background: var(--cinza-claro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.placeholder-imagem {
+    width: 300px;
+    height: 300px;
+    background: var(--cinza);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--branco);
+    font-weight: bold;
+    font-size: 14px;
+    transition: transform 0.3s;
+}
+
+/* Zoom na imagem ao passar o mouse */
+.cartao-produto:hover .placeholder-imagem {
+    transform: scale(1.1);
+}
+
+/* Etiquetas de novo/promoção */
+.etiqueta-novo,
+.etiqueta-promocao {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--branco);
+    animation: entrar-esquerda 0.5s ease;
+}
+
+.etiqueta-novo {
+    background: var(--verde);
+}
+
+.etiqueta-promocao {
+    background: var(--vermelho);
+}
+
+/* Animação de entrada da etiqueta */
+@keyframes entrar-esquerda {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Informações do produto */
+.informacoes-produto {
+    padding: 20px;
+}
+
+.nome-produto {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: var(--preto);
+}
+
+.descricao-produto {
+    font-size: 14px;
+    color: var(--cinza-escuro);
+    margin-bottom: 15px;
+}
+
+/* Preço normal */
+.preco-produto {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--azul);
+    margin-bottom: 15px;
+}
+
+/* Preço promocional */
+.preco-promocional {
+    margin-bottom: 15px;
+}
+
+.preco-antigo {
+    display: block;
+    font-size: 14px;
+    color: var(--cinza);
+    text-decoration: line-through;
+}
+
+.preco-atual {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--vermelho);
+}
+
+/* Botão de comprar */
+.botao-comprar {
+    width: 100%;
+    padding: 12px;
+    background: var(--azul);
+    color: var(--branco);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s, transform 0.1s;
+}
+
+/* Efeito de ondulação no botão */
+.botao-comprar::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.botao-comprar:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+.botao-comprar:hover {
+    background: var(--azul-escuro);
+}
+
+/* Efeito de clique */
+.botao-comprar:active {
+    transform: scale(0.98);
+}
+
+/* ============================================
+   RODAPÉ
+   ============================================ */
+.rodape {
+    background: var(--preto);
+    color: var(--branco);
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.texto-rodape {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+@media (max-width: 768px) {
+    .cabecalho .espaco {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .lista-menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .titulo-banner {
+        font-size: 28px;
+    }
+
+    .grade-produtos {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grade-produtos {
+        grid-template-columns: 1fr;
+    }
+}

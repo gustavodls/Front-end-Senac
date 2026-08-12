@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade Back-End</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+
+    </header>
+
+    <nav>
+
+    </nav>
+
+    <main>
+        <form id="form">
+            <h1>Formulário</h1>
+            <br>
+            <label for="Nome">Digite seu Nome:</label>
+            <input type="text" id="nome">
+            <br>
+            <label for="Idade">Digite sua Idade:</label>   <!-- meu nome é top*/-->
+            <input type="date" id="idade">
+            <br>
+            <label for="Curso">Digite seu Curso</label>
+            <input type="text" id="curso">
+
+            <button type="button" onclick="mostrarDados()">Clique aqui para ver seus dados</button>
+        </form>
+        <hr>
+
+        <h1 id="titulo" >Meu curriculo</h1>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur ad fuga cumque, rem est ullam sint aliquam at non! A dolorem nobis laudantium suscipit repellat amet ratione qui? Impedit, suscipit.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, dignissimos voluptatem quas quasi culpa perspiciatis sunt vitae numquam ullam eius cum hic, a corrupti saepe? Aliquid deserunt cupiditate voluptate voluptatem.
+        <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas unde perspiciatis culpa alias esse a, sit illum eius consectetur accusamus laborum quos tempora illo doloremque dolores ab, architecto deserunt eaque.
+
+        <button type="button" onclick="mudar()">mudarTitulo</button>
+        <br><hr>
+
+        <label for="nome">Digite seu Nome:</label>
+        <input type="text" id="nome1" placeholder="Digite seu Nome"> 
+        <button type="button" onclick="elogio()">Clique aqui</button>
+        <br>
+        <hr>
+
+        <fieldset>Soma
+            <input type="number" id="Pnumero" placeholder="Digite um Numero">
+            <input type="number" id="Snumero" placeholder="Digite outro Numero">
+
+            <button onclick="soma()">Clique</button>
+        </fieldset>
+
+        <fieldset>
+            Peso IMC
+
+            <br>
+            <label for="peso">Digite seu Peso:</label>
+            <input type="number" id="peso" placeholder="Digite seu peso">
+
+            <label for="altura">Digite sua Alturar</label>
+            <input type="number" id="altura" placeholder="Digite sua altura">
+
+            <button onclick="calculo()">Clique aqui</button>
+
+        </fieldset>
+
+        <fieldset> calculo de idade
+            <br>
+            <label for="data">Digite sua data de nascimento:</label>
+            <input id="data" placeholder="data de nascimento">
+
+            <button onclick="Cdata()">calcular</button>
+        </fieldset>
+
+        <fieldset>Nota
+            <br>
+            <input type="text" placeholder="nota">
+            <button onclick="Cnota()">Calcule</button>
+
+        </fieldset>
+
+        <fieldset>Jogo da idosa
+
+
+            <label for="escolha">escolha</label>
+
+            <button onclick="jogar()"> Pedra</button>
+            <button onclick="jogar()"> Papel</button>
+            <button onclick="jogar()"> Tesoura</button>
+
+            <div id="Resultado">Resultado</div>
+
+
+        </fieldset>
+
+
+    </main>
+
+    <footer>
+        
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

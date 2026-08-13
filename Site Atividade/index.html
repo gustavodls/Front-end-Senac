@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Store - Início</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Pixel Store</h1>
+
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="atendimento.html">Atendimento</a>
+      </nav>
+    </header>
+
+    <div class="corte"></div>
+
+    <main>
+      <section id="apresentacao" class="hero">
+        <div class="apresentacaoE">
+          <h2>Seu universo de tecnologia e jogos</h2>
+          <p>
+            Encontre acessórios, periféricos e produtos para deixar sua
+            experiência ainda mais completa.
+          </p>
+
+          <p>
+            Aqui você encontra tudo que um gamer precisa: de headsets e teclados
+            mecânicos a PCs de alta performance, mouses de precisão e acessórios
+            que fazem a diferença na sua gameplay e no seu setup.
+          </p>
+
+          <p>
+            Na [Nome da Loja], trabalhamos com uma curadoria de produtos pensada
+            para quem joga de verdade, oferecendo marcas confiáveis, garantia de
+            procedência e suporte especializado para te ajudar a escolher o
+            equipamento ideal para o seu estilo de jogo.
+          </p>
+
+          <p>
+            Oferecemos envio rápido e seguro para todo o Brasil, além de
+            condições de pagamento que cabem no seu bolso. Se você está em
+            dúvida sobre qual periférico combina mais com você, nossa equipe
+            está pronta para dar uma recomendação personalizada.
+          </p>
+
+          <a class="botao" href="catalogo.html"> Ver catálogo </a>
+        </div>
+        <div class="apresentacaoD">
+          <img src="img\imgtopo.avif" alt="Produtos de tecnologia e jogos" />
+        </div>
+      </section>
+
+      <section class="saudacao">
+        <h2>Entre na Pixel Store</h2>
+
+        <input type="text" id="nomeVisitante" placeholder="Digite seu nome" />
+
+        <button onclick="darBoasVindas()">Entrar na loja</button>
+
+        <p id="mensagemBoasVindas"></p>
+      </section>
+
+      <section id="destaques" class="secao">
+        <h2>Destaques da semana</h2>
+
+        <div class="produtos">
+          <article class="card">
+            <img src="imagens/mouse.jpg" alt="Mouse Gamer" />
+            <h3>Mouse Gamer</h3>
+            <p>Precisão e velocidade para seus jogos.</p>
+            <strong>R$ 120,00</strong>
+          </article>
+
+          <article class="card">
+            <img src="imagens/headset.jpg" alt="Headset" />
+            <h3>Headset</h3>
+            <p>Som imersivo e comunicação de qualidade.</p>
+            <strong>R$ 150,00</strong>
+          </article>
+
+          <article class="card">
+            <img src="imagens/controle.jpg" alt="Controle" />
+            <h3>Controle</h3>
+            <p>Conforto para jogar seus títulos favoritos.</p>
+            <strong>R$ 220,00</strong>
+          </article>
+        </div>
+
+        <button onclick="ativarPromocao()">Ativar modo promoção</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Pixel Store. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>

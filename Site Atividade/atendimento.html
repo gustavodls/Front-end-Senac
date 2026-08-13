@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Store - Atendimento</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Pixel Store</h1>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="atendimento.html">Atendimento</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="areaAtendimento" class="formulario-container">
+            <h2>Atendimento ao cliente</h2>
+
+            <form>
+                <fieldset>
+                    <legend>Envie sua mensagem</legend>
+
+                    <label for="nomeCliente">Nome:</label>
+                    <input type="text" id="nomeCliente">
+
+                    <label for="emailCliente">E-mail:</label>
+                    <input type="email" id="emailCliente">
+
+                    <label for="idadeCliente">Idade:</label>
+                    <input type="number" id="idadeCliente" min="1">
+
+                    <label for="assunto">Assunto:</label>
+                    <select id="assunto">
+                        <option>Dúvida sobre produto</option>
+                        <option>Problema com compra</option>
+                        <option>Outros</option>
+                    </select>
+
+                    <label for="mensagemCliente">Mensagem:</label>
+                    <textarea id="mensagemCliente" rows="5"></textarea>
+
+                    <button type="button" onclick="enviarMensagem()">
+                        Enviar mensagem
+                    </button>
+
+                    <button type="button" onclick="destacarAtendimento()">
+                        Destacar atendimento
+                    </button>
+                </fieldset>
+            </form>
+
+            <p id="respostaAtendimento"></p>
+            <p id="respostaIdade"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Pixel Store. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

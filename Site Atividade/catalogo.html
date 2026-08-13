@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Store - Catálogo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Pixel Store</h1>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="atendimento.html">Atendimento</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="secao">
+            <h2>Catálogo de produtos</h2>
+
+            <div class="produtos">
+                <article class="card">
+                    <img src="imagens/mouse.jpg" alt="Mouse Gamer">
+                    <h3>Mouse Gamer</h3>
+                    <p>Mouse com alta precisão e design confortável.</p>
+                    <strong>R$ 120,00</strong>
+                </article>
+
+                <article class="card">
+                    <img src="imagens/teclado.jpg" alt="Teclado Mecânico">
+                    <h3>Teclado Mecânico</h3>
+                    <p>Teclas responsivas para digitação e jogos.</p>
+                    <strong>R$ 180,00</strong>
+                </article>
+
+                <article class="card">
+                    <img src="imagens/headset.jpg" alt="Headset">
+                    <h3>Headset</h3>
+                    <p>Áudio envolvente com microfone integrado.</p>
+                    <strong>R$ 150,00</strong>
+                </article>
+
+                <article class="card">
+                    <img src="imagens/controle.jpg" alt="Controle">
+                    <h3>Controle</h3>
+                    <p>Controle confortável para computadores e consoles.</p>
+                    <strong>R$ 220,00</strong>
+                </article>
+            </div>
+        </section>
+
+        <section class="simulador">
+            <h2>Simular compra</h2>
+
+            <label for="produto">Escolha um produto:</label>
+
+            <select id="produto">
+                <option value="120">Mouse Gamer - R$ 120</option>
+                <option value="180">Teclado Mecânico - R$ 180</option>
+                <option value="150">Headset - R$ 150</option>
+                <option value="220">Controle - R$ 220</option>
+            </select>
+
+            <label for="quantidade">Quantidade:</label>
+
+            <input
+                type="number"
+                id="quantidade"
+                min="1"
+                value="1"
+            >
+
+            <button onclick="calcularTotal()">
+                Calcular total
+            </button>
+
+            <p id="resultadoCompra"></p>
+            <p id="resultadoFrete"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Pixel Store. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

@@ -63,13 +63,102 @@ a{
 }
 
 .botao{
-  margin-top: 15px;
-  padding: 10px 20px;
-  cursor: pointer;
-  background-color: aqua;
-  width: 130px;
-  border-radius: 10px;
-  color: #101426;
+    margin-top: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: aqua;
+    width: 130px;
+    border-radius: 10px;
+    color: #101426;
   
 
+}
+
+.saudacao{
+
+    text-align: center;
+}
+
+.botaoNome{
+    margin-top: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: rgb(72, 75, 75);
+    width: 300px;
+    border-radius: 10px;
+    color: #e4e9ff;
+    border: solid 1px aqua;
+}
+
+.botaoEntrar{
+
+    margin-top: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: aqua;
+    width: 130px;
+    border-radius: 10px;
+    color: #101426;
+}
+
+.secao{
+   
+    text-align: center;
+    margin-top: 80px;
+}
+
+.produtos{
+    display: flex;
+    flex: wrap wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.card{  
+    max-width: 500px;           
+    background: #0b0b0f;
+    color: #e5e5e5;
+    padding: 30px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.card img{
+
+    width: 350px;
+    height: 300px;
+}
+
+.botaoPromo{
+    margin-top: 15px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: aqua;
+    width: 200px;
+    border-radius: 10px;
+    color: #101426;
+    margin-top: 80px;
+}
+
+.Bcomprar{
+    margin-top: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: aqua;
+    width: 130px;
+    border-radius: 10px;
+    color: #101426;
+  
 }

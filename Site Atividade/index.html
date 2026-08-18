@@ -59,9 +59,9 @@
       <section class="saudacao">
         <h2>Entre na Pixel Store</h2>
 
-        <input type="text" id="nomeVisitante" placeholder="Digite seu nome" />
+        <input type="text" class="botaoNome" id="nomeVisitante" placeholder="Digite seu nome" />
 
-        <button onclick="darBoasVindas()">Entrar na loja</button>
+        <button class="botaoEntrar" onclick="darBoasVindas()">Entrar na loja</button>
 
         <p id="mensagemBoasVindas"></p>
       </section>
@@ -71,28 +71,31 @@
 
         <div class="produtos">
           <article class="card">
-            <img src="imagens/mouse.jpg" alt="Mouse Gamer" />
+            <img src="img\mouse2.webp" alt="Mouse Gamer" />
             <h3>Mouse Gamer</h3>
             <p>Precisão e velocidade para seus jogos.</p>
             <strong>R$ 120,00</strong>
+            <button class="Bcomprar">Comprar</button>
           </article>
 
           <article class="card">
-            <img src="imagens/headset.jpg" alt="Headset" />
+            <img src="img\Headset.avif" alt="Headset" />
             <h3>Headset</h3>
             <p>Som imersivo e comunicação de qualidade.</p>
             <strong>R$ 150,00</strong>
+            <button class="Bcomprar">Comprar</button>
           </article>
 
           <article class="card">
-            <img src="imagens/controle.jpg" alt="Controle" />
+            <img src="img\Controle.png" alt="Controle" />
             <h3>Controle</h3>
             <p>Conforto para jogar seus títulos favoritos.</p>
             <strong>R$ 220,00</strong>
+            <button class="Bcomprar">Comprar</button>
           </article>
         </div>
 
-        <button onclick="ativarPromocao()">Ativar modo promoção</button>
+        <button class="botaoPromo" onclick="ativarPromocao()">Ativar modo promoção</button>
       </section>
     </main>
     
